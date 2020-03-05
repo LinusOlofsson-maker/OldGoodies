@@ -1,0 +1,74 @@
+<IncrediblyCrudeClock>:
+
+
+<MyGrid>:
+
+    clocktext: clocktext
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+
+        GridLayout:
+            cols:2
+            Label:
+                text: "[u][i][b]Ne[/b]ws[/i][/u]"
+                color: 1, 0, 0, 1
+                font_name: 'Roboto'
+                font_size: 30
+                markup: True
+            Label:
+                text: "[u][i][b]Me[/b]dia[/i][/u]"
+                color: 0, 0, 1, 1
+                font_name: 'Roboto'
+                font_size: 30
+                markup: True
+            GridLayout:
+                cols:1
+                Button:
+                    text:"[b]CNN[/b]"
+                    on_release: root.runCNN()
+                    background_color: (240, 0, 0, 0.9)
+                    markup: True
+                Button:
+                    text:"[b]BBC[/b]"
+                    on_release: root.runBBC()
+                    background_color: (240, 0, 0, 0.9)
+                    markup: True
+                Button:
+                    on_release: root.runGnews()
+                    text:"[b]Gnews[/b]"
+                    background_color: (240, 0, 0, 0.9)
+                    markup: True
+            GridLayout:
+                cols:1
+                Button:
+                    on_release: root.runPlex()
+                    text:"[b]Plex[/b]"
+                    markup: True
+                    background_color: (0, 0, 255, 0.9)
+                Button:
+                    on_release: root.runNetflix()
+                    text:"[b]Netflix[/b]"
+                    markup: True
+                    background_color: (0, 0, 255, 0.9)
+                Button:
+                    on_release: root.runSpotify()
+                    text:"[b]Spotify[/b]"
+                    markup: True
+                    background_color: (0, 0, 255, 0.9)
+                Button:
+                    on_release: root.runDplay()
+                    text:"[b]Dplay[/b]"
+                    markup: True
+                    background_color: (0, 0, 255, 0.9)
+
+            GridLayout:
+                cols:1
+                ClockText:
+                    id: clocktext
+                    text: '[b]00[/b]:00:00'
+                    font_name: 'Roboto'
+                    font_size: 60
+                    markup: True
